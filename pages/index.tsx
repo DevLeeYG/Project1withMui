@@ -6,8 +6,9 @@ import AppLayout from "../component/AppLayout";
 const Home: NextPage = () => {
   return (
     <>
-      <AppLayout></AppLayout>
-      <div>ffdsfsdfsdf</div>
+      <AppLayout>
+        <div>home</div>
+      </AppLayout>
     </>
   );
 };

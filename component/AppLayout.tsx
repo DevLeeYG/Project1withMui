@@ -46,7 +46,7 @@ const AppLayout = ({ children }: Props) => {
               aria-label="menu"
               sx={{ mr: 2 }}
             >
-              <MenuIcon />
+              <MenuIcon sx={{ display: { md: "none" } }} />
             </IconButton>
             {isXs ? (
               <Typography
@@ -69,18 +69,18 @@ const AppLayout = ({ children }: Props) => {
               <Link passHref href="/about">
                 <a style={styles}>about</a>
               </Link>
-              <Link href="/journal">
+              <Link passHref href="/journal">
                 <a style={styles}>journal</a>
               </Link>
-              <Link href="/contact">
+              <Link passHref href="/contact">
                 <a style={styles}>contact</a>
               </Link>
             </Box>
-            <Button color="inherit">Login</Button>
+            {isXs ? null : <Button color="inherit">Login</Button>}
           </Toolbar>
         </AppBar>
       </Box>
-      {children}
+      <Box>{children}</Box>
     </>
   );
 };

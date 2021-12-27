@@ -4,8 +4,9 @@ import AppLayout from "../component/AppLayout";
 const about = () => {
   return (
     <div>
-      <AppLayout></AppLayout>
-      <div>adfadf</div>;
+      <AppLayout>
+        <div>about</div>
+      </AppLayout>
     </div>
   );
 };

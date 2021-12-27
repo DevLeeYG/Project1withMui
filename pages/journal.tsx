@@ -4,8 +4,9 @@ import AppLayout from "../component/AppLayout";
 const journal = () => {
   return (
     <>
-      <AppLayout></AppLayout>
-      <div>asdfasdfdsf</div>
+      <AppLayout>
+        <div>journal</div>
+      </AppLayout>
     </>
   );
 };
