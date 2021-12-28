@@ -2,8 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen;
+  background-image: url("../img/background.png");
 }
 
 a {
@@ -13,4 +13,23 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.My {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.about-main {
+}
+
+@media screen and (max-width: 1000px) {
+  .My {
+    font-size: 70px;
+  }
 }

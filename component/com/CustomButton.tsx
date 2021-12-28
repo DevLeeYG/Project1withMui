@@ -8,7 +8,7 @@ import { TextField, Box, Typography } from "@mui/material";
 import stlyed from "styled-components";
 
 const SignUpAndFind = stlyed.span`
-    color : #ff2600;
+    color : #007fff;
     cursor: pointer;
     font-weight: 600;
     font-family: Helvetica, Arial, sans-serif;
@@ -91,10 +91,10 @@ export default function UseButton() {
         </CustomButton>
       </Stack>
       <Select>
-        <SignUpAndFind>회원가입</SignUpAndFind>
+        <SignUpAndFind>sign up</SignUpAndFind>
 
         <em> / </em>
-        <SignUpAndFind>아이디찾기</SignUpAndFind>
+        <SignUpAndFind>find id</SignUpAndFind>
       </Select>
     </Box>
   );

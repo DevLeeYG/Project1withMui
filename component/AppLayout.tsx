@@ -13,6 +13,8 @@ import Link from "next/link";
 import AccountModal from "../component/Navdetail/AccountModal";
 import Sidebar from "./com/Sidebar";
 
+import background from "../img/background.png";
+
 type homemanu = {
   marginRight: string;
   marginLeft: string;
@@ -27,16 +29,13 @@ const AppLayout = ({ children }: Props) => {
   const isXs = useMediaQuery("(max-width:768px)");
   const [sidebar, setSidebar] = useState<Boolean>(false);
 
-  const onSidebar = () => {
-    setSidebar(!sidebar);
-  };
-
   return (
-    <>
+    <div>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
+        <AppBar>
+          <Toolbar sx={{ backgroundColor: "black" }}>
             <Sidebar />
+
             {isXs ? (
               <Typography
                 variant="h6"
@@ -54,7 +53,13 @@ const AppLayout = ({ children }: Props) => {
                 </Link>
               </Typography>
             )}
-            <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
+            <Box
+              sx={{
+                flexGrow: 1,
+
+                display: { xs: "none", sm: "block" },
+              }}
+            >
               <Link passHref href="/about">
                 <a style={styles}>about</a>
               </Link>
@@ -69,8 +74,14 @@ const AppLayout = ({ children }: Props) => {
           </Toolbar>
         </AppBar>
       </Box>
-      <Box>{children}</Box>
-    </>
+      <Box
+        sx={{
+          height: "100vh",
+        }}
+      >
+        {children}
+      </Box>
+    </div>
   );
 };
 
