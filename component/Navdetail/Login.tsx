@@ -4,19 +4,17 @@ import TextField from "@mui/material/TextField";
 
 export default function Login() {
   return (
-    <form>
-      <Stack
-        component="form"
-        sx={{
-          width: "100%",
-        }}
-        spacing={2}
-        noValidate
-        autoComplete="off"
-      >
-        <TextField label="email" color="primary" focused />
-        <TextField label="password" color="primary" focused />
-      </Stack>
-    </form>
+    <Stack
+      component="form"
+      sx={{
+        width: "100%",
+      }}
+      spacing={2}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField label="email" color="primary" focused />
+      <TextField label="password" color="primary" focused />
+    </Stack>
   );
 }

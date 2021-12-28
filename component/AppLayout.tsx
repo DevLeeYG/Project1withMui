@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -11,17 +11,8 @@ import { useMediaQuery } from "@material-ui/core";
 import { Props } from "./Props";
 import Link from "next/link";
 import AccountModal from "../component/Navdetail/AccountModal";
-const MenuBox = styled.div`
-  text-align: center;
+import Sidebar from "./com/Sidebar";
 
-  a {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
 type homemanu = {
   marginRight: string;
   marginLeft: string;
@@ -34,20 +25,18 @@ let styles: homemanu = {
 
 const AppLayout = ({ children }: Props) => {
   const isXs = useMediaQuery("(max-width:768px)");
+  const [sidebar, setSidebar] = useState<Boolean>(false);
+
+  const onSidebar = () => {
+    setSidebar(!sidebar);
+  };
+
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: -3 }}
-            >
-              <MenuIcon sx={{ display: { md: "none" } }} />
-            </IconButton>
+            <Sidebar />
             {isXs ? (
               <Typography
                 variant="h6"
