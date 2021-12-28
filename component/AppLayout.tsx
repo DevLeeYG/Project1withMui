@@ -10,7 +10,7 @@ import styled from "styled-components";
 import { useMediaQuery } from "@material-ui/core";
 import { Props } from "./Props";
 import Link from "next/link";
-
+import AccountModal from "../component/Navdetail/AccountModal";
 const MenuBox = styled.div`
   text-align: center;
 
@@ -44,7 +44,7 @@ const AppLayout = ({ children }: Props) => {
               edge="start"
               color="inherit"
               aria-label="menu"
-              sx={{ mr: 2 }}
+              sx={{ mr: -3 }}
             >
               <MenuIcon sx={{ display: { md: "none" } }} />
             </IconButton>
@@ -76,7 +76,7 @@ const AppLayout = ({ children }: Props) => {
                 <a style={styles}>contact</a>
               </Link>
             </Box>
-            {isXs ? null : <Button color="inherit">Login</Button>}
+            {isXs ? null : <AccountModal>Login</AccountModal>}
           </Toolbar>
         </AppBar>
       </Box>
