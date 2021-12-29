@@ -10,7 +10,7 @@ const My = () => {
         onInit={(typewriter) => {
           typewriter
 
-            .typeString("FRONTEND DEVELOPER <br/><br/>LEE Y.G")
+            .typeString("ARIANA GRANDE <br/><br/>FAN PAGE")
 
             .pauseFor(100)
 

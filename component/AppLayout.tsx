@@ -13,8 +13,6 @@ import Link from "next/link";
 import AccountModal from "../component/Navdetail/AccountModal";
 import Sidebar from "./com/Sidebar";
 
-import background from "../img/background.png";
-
 type homemanu = {
   marginRight: string;
   marginLeft: string;
@@ -62,8 +60,8 @@ const AppLayout = ({ children }: Props) => {
                 display: { xs: "none", sm: "block" },
               }}
             >
-              <Link passHref href="/about">
-                <a style={styles}>about</a>
+              <Link passHref href="/stars/pick">
+                <a style={styles}>STAR'S</a>
               </Link>
               <Link passHref href="/journal">
                 <a style={styles}>journal</a>
@@ -76,7 +74,7 @@ const AppLayout = ({ children }: Props) => {
           </Toolbar>
         </AppBar>
       </Box>
-      <Box sx={{ minHeight: 64 }} />
+      <Box sx={{ height: 64 }} />
       <Box>{children}</Box>
     </div>
   );
