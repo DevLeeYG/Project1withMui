@@ -33,7 +33,9 @@ const AppLayout = ({ children }: Props) => {
     <div>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar>
-          <Toolbar sx={{ backgroundColor: "black" }}>
+          <Toolbar
+            sx={{ position: "fixed", width: "100%", backgroundColor: "black" }}
+          >
             <Sidebar />
 
             {isXs ? (
@@ -74,13 +76,8 @@ const AppLayout = ({ children }: Props) => {
           </Toolbar>
         </AppBar>
       </Box>
-      <Box
-        sx={{
-          height: "100vh",
-        }}
-      >
-        {children}
-      </Box>
+      <Box sx={{ minHeight: 64 }} />
+      <Box>{children}</Box>
     </div>
   );
 };

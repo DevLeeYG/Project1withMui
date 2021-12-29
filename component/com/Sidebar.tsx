@@ -48,7 +48,7 @@ const Sidebar = () => {
           aria-label="open drawer"
           onClick={handleDrawerOpen}
           edge="start"
-          sx={{ mr: -5, ...(open && { display: "none" }) }}
+          sx={{ minHeight: 64, mr: -5, ...(open && { display: "none" }) }}
         >
           <MenuIcon />
         </IconButton>
