@@ -1,16 +1,16 @@
-import Typewriter from "typewriter-effect";
+import Typewriter from 'typewriter-effect';
 
-import React from "react";
+import React from 'react';
 
 const My = () => {
   return (
-    <div className="My">
+    <div className="main">
       <Typewriter
         options={{ autoStart: true, loop: true }}
         onInit={(typewriter) => {
           typewriter
 
-            .typeString("ARIANA GRANDE <br/><br/>FAN PAGE")
+            .typeString('ARIANA GRANDE <br/><br/>FAN PAGE')
 
             .pauseFor(100)
 

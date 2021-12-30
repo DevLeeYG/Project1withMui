@@ -1,10 +1,10 @@
-import { Box } from "@mui/system";
-import type { NextPage } from "next";
-import Head from "next/head";
-import myPicture from "../img/myp.jpg";
-import AppLayout from "../component/AppLayout";
+import { Box } from '@mui/system';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import myPicture from '../img/myp.jpg';
+import AppLayout from '../component/AppLayout';
 
-import My from "../component/MainHome/My";
+import My from '../component/MainHome/My';
 // const style = {
 //   position: "absolute" as "absolute",
 //   top: "50%",
@@ -20,7 +20,10 @@ const Home: NextPage = () => {
   return (
     <div>
       <AppLayout>
-        <My />
+        <div>
+          <My />
+          <My />
+        </div>
       </AppLayout>
     </div>
   );

@@ -27,10 +27,12 @@ export const device = {
 
 const Div = styled.div`
   display: flex;
-  width: '100%';
 
+  width: '100%';
+  height: 93vh;
   @media ${device.tablet} {
     flex-direction: column;
+    width: 100%;
   }
 `;
 
@@ -44,7 +46,7 @@ const Item = (props: BoxProps) => {
         alignItems: 'center',
         bgcolor: 'primary.main',
         color: 'black',
-        width: '95%',
+        width: '98%',
         height: 500,
         m: 1,
         borderRadius: 1,
@@ -65,7 +67,7 @@ const journal = () => {
       <AppLayout>
         <Div>
           <Item>1</Item>
-          <Item>2</Item>
+          <Item>1</Item>
         </Div>
       </AppLayout>
     </>

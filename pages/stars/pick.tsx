@@ -1,10 +1,10 @@
-import React from "react";
-import AppLayout from "../../component/AppLayout";
-import Box from "@mui/material/Box";
-import { useMediaQuery } from "@material-ui/core";
-import styled, { keyframes } from "styled-components";
-import { IoIosArrowForward } from "react-icons/io";
-import Avatarc from "../../component/Avararc";
+import React from 'react';
+import AppLayout from '../../component/AppLayout';
+import Box from '@mui/material/Box';
+import { useMediaQuery } from '@material-ui/core';
+import styled, { keyframes } from 'styled-components';
+import { IoIosArrowForward } from 'react-icons/io';
+import Avatarc from '../../component/Avararc';
 function blinkingEffect() {
   return keyframes`
     100% {
@@ -38,33 +38,31 @@ const Child = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 93vh;
   width: 50vh;
 `;
 
 const about = () => {
-  const isXs = useMediaQuery("(max-width:768px)");
+  const isXs = useMediaQuery('(max-width:768px)');
   const style = {};
   return (
     <div>
       <AppLayout>
-        <Box>
-          <Box
-            display="flex"
-            justifyContent="center"
-            sx={{
-              width: "100%",
-            }}
-          >
-            <Mother>
-              <AnimatedComponent>
-                <IoIosArrowForward size="50" />
-              </AnimatedComponent>
-              <Child>
-                <Avatarc />
-              </Child>
-            </Mother>
-          </Box>
+        <Box
+          display="flex"
+          justifyContent="center"
+          sx={{
+            width: '100%',
+          }}
+        >
+          <Mother>
+            <AnimatedComponent>
+              <IoIosArrowForward size="50" />
+            </AnimatedComponent>
+            <Child>
+              <Avatarc />
+            </Child>
+          </Mother>
         </Box>
       </AppLayout>
     </div>
